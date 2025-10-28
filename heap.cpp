@@ -107,7 +107,7 @@ class heap{
 
 };
 
-/*int main(){
+int main(){
     heap arr;
     arr.insert(5);
     arr.insert(15);
@@ -124,20 +124,17 @@ class heap{
     arr.buildMaxHeap();
     cout << "\n";
     arr.print();
-    
-}*/
+    cout << "\n";
 
-int main(){
-    heap h;
-
-    h.insertWithPriority(10, 2);
-    h.insertWithPriority(18, 0);
-    h.insertWithPriority(20, 5);
-    h.insertWithPriority(15, 3);
-
-    cout << "\nextracting in priority order:\n";
+    cout << "\nPriority Queue:\n";
+    heap pq;
+    pq.insertWithPriority(10, 2);
+    pq.insertWithPriority(18, 0);
+    pq.insertWithPriority(20, 5);
+    pq.insertWithPriority(15, 3);
+    cout << "Extracting in priority order:\n";
     while (true){
-        auto top = h.extractMaxPriority();
+        auto top = pq.extractMaxPriority();
         if (top.first == -1) break;
         cout << "Value: " << top.second << endl;
     }
